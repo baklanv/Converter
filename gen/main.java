@@ -2,12 +2,15 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
+import src.main.Lisp1Lexer;
+import src.main.Lisp1Parser;
+import src.main.MyListener;
 
 public class main {
     public static void main(String[] args) {
 
         //System.out.println("Hello world!");
-        LispLexer lexer = new LispLexer(CharStreams.fromString( "( game \"TicTacToe\"\n" +
+        Lisp1Lexer lexer = new Lisp1Lexer(CharStreams.fromString( "( game \"TicTacToe\"\n" +
                 "( players 2)\n" +
                 "( equipment\n" +
                 "{\n" +
@@ -22,13 +25,13 @@ public class main {
                 ")\n" +
                 ")"));
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        LispParser parser = new LispParser(tokens);
+        Lisp1Parser parser = new Lisp1Parser(tokens);
         ParseTree tree = parser.program();
 
 
         System.out.println("Parse tree : " + tree.toStringTree(parser));
         ParseTreeWalker walker = new ParseTreeWalker();
-        MyLispListener myLispListener = new MyLispListener();
+        MyListener myLispListener = new MyListener();
         walker.walk(myLispListener, tree);
     }
 }

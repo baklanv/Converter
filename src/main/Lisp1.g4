@@ -20,7 +20,6 @@ ISA: '@is_a:' ;
 PIECE : '@piece' ;
 DEFINE : 'define';
 ABSTRACT : '@abstract';
-name : STRING;
 
 IDENTIFIER : ((LETTER (LETTER | DIGIT)*)| ARITHMETIC | LOGICAL | EMTPY | PARAM)  ;
 NAMEIDENTIFIER : IDENTIFIER ':';
