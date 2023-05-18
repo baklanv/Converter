@@ -1,16 +1,16 @@
+import antlr.MyListener;
+import antlr.com.MyGrammarLexer;
+import antlr.com.MyGrammarParser;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
-import src.main.Lisp1Lexer;
-import src.main.Lisp1Parser;
-import src.main.MyListener;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
         //System.out.println("Hello world!");
-        Lisp1Lexer lexer = new Lisp1Lexer(CharStreams.fromString( "// ------------------------------- Abstract pieces -------------------------------\n" +
+        MyGrammarLexer lexer = new MyGrammarLexer(CharStreams.fromString( "// ------------------------------- Abstract pieces -------------------------------\n" +
                 "(@piece @abstract \"Animal\"\n" +
                 "\n" +
                 "\t(define \"MoveStep\"\n" +
@@ -184,7 +184,7 @@ public class main {
                 "    })    \n" +
                 ")\n"));
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        Lisp1Parser parser = new Lisp1Parser(tokens);
+        MyGrammarParser parser = new MyGrammarParser(tokens);
         ParseTree tree = parser.program();
 
 
@@ -192,5 +192,9 @@ public class main {
         ParseTreeWalker walker = new ParseTreeWalker();
         MyListener myLispListener = new MyListener();
         walker.walk(myLispListener, tree);
+
+        //int ui =
+        myLispListener.mapFormation();
+        int k = 0 +22;
     }
 }

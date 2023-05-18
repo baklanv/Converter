@@ -1,4 +1,4 @@
-grammar Lisp1;
+grammar MyGrammar;
 /*---------------------------------------------------------------
  * A very basic implementation of a Lisp grammar.
  *------------------------------------------------------------------*/
@@ -15,7 +15,6 @@ move : expression |STRING ;
 /*------------------------------------------------------------------
  * LEXER RULES
  *------------------------------------------------------------------*/
-//NAMEIDENTIFIER : IDENTIFIER ':';
 ISA: '@is_a:' ;
 PIECE : '@piece' ;
 DEFINE : 'define';
