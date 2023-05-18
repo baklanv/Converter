@@ -1,5 +1,5 @@
-// Generated from C:/Projects/test1/src/main\Lisp1.g4 by ANTLR 4.12.0
-package src.main;
+// Generated from C:/Projects/test1/src/main/java/antlr\MyGrammar.g4 by ANTLR 4.12.0
+package antlr.com;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class Lisp1Lexer extends Lexer {
+public class MyGrammarLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.12.0", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -89,13 +89,13 @@ public class Lisp1Lexer extends Lexer {
 	}
 
 
-	public Lisp1Lexer(CharStream input) {
+	public MyGrammarLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Lisp1.g4"; }
+	public String getGrammarFileName() { return "MyGrammar.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

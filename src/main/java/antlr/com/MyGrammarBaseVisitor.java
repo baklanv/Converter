@@ -1,9 +1,9 @@
-// Generated from C:/Projects/test1/src/main\Lisp1.g4 by ANTLR 4.12.0
-package src.main;
+// Generated from C:/Projects/test1/src/main/java/antlr\MyGrammar.g4 by ANTLR 4.12.0
+package antlr.com;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link Lisp1Visitor},
+ * This class provides an empty implementation of {@link MyGrammarVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
@@ -11,47 +11,47 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
  * operations with no return type.
  */
 @SuppressWarnings("CheckReturnValue")
-public class Lisp1BaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Lisp1Visitor<T> {
+public class MyGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements MyGrammarVisitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProgram(Lisp1Parser.ProgramContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgram(MyGrammarParser.ProgramContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression(Lisp1Parser.ExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpression(MyGrammarParser.ExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPieces(Lisp1Parser.PiecesContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPieces(MyGrammarParser.PiecesContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParent(Lisp1Parser.ParentContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParent(MyGrammarParser.ParentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDefine(Lisp1Parser.DefineContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDefine(MyGrammarParser.DefineContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMove(Lisp1Parser.MoveContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMove(MyGrammarParser.MoveContext ctx) { return visitChildren(ctx); }
 }

@@ -1,16 +1,13 @@
-// Generated from C:/Projects/test1/src/main\Lisp1.g4 by ANTLR 4.12.0
-package src.main;
+// Generated from C:/Projects/test1/src/main/java/antlr\MyGrammar.g4 by ANTLR 4.12.0
+package antlr.com;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
-import java.util.Iterator;
-import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class Lisp1Parser extends Parser {
+public class MyGrammarParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.12.0", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -81,7 +78,7 @@ public class Lisp1Parser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Lisp1.g4"; }
+	public String getGrammarFileName() { return "MyGrammar.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -92,17 +89,17 @@ public class Lisp1Parser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public Lisp1Parser(TokenStream input) {
+	public MyGrammarParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ProgramContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(Lisp1Parser.EOF, 0); }
-		public List<TerminalNode> COMMENT() { return getTokens(Lisp1Parser.COMMENT); }
+		public TerminalNode EOF() { return getToken(MyGrammarParser.EOF, 0); }
+		public List<TerminalNode> COMMENT() { return getTokens(MyGrammarParser.COMMENT); }
 		public TerminalNode COMMENT(int i) {
-			return getToken(Lisp1Parser.COMMENT, i);
+			return getToken(MyGrammarParser.COMMENT, i);
 		}
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -116,15 +113,15 @@ public class Lisp1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).enterProgram(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).enterProgram(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).exitProgram(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).exitProgram(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof Lisp1Visitor ) return ((Lisp1Visitor<? extends T>)visitor).visitProgram(this);
+			if ( visitor instanceof MyGrammarVisitor ) return ((MyGrammarVisitor<? extends T>)visitor).visitProgram(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -181,27 +178,27 @@ public class Lisp1Parser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ExpressionContext extends ParserRuleContext {
-		public TerminalNode OP() { return getToken(Lisp1Parser.OP, 0); }
-		public TerminalNode CP() { return getToken(Lisp1Parser.CP, 0); }
-		public List<TerminalNode> IDENTIFIER() { return getTokens(Lisp1Parser.IDENTIFIER); }
+		public TerminalNode OP() { return getToken(MyGrammarParser.OP, 0); }
+		public TerminalNode CP() { return getToken(MyGrammarParser.CP, 0); }
+		public List<TerminalNode> IDENTIFIER() { return getTokens(MyGrammarParser.IDENTIFIER); }
 		public TerminalNode IDENTIFIER(int i) {
-			return getToken(Lisp1Parser.IDENTIFIER, i);
+			return getToken(MyGrammarParser.IDENTIFIER, i);
 		}
-		public List<TerminalNode> STRING() { return getTokens(Lisp1Parser.STRING); }
+		public List<TerminalNode> STRING() { return getTokens(MyGrammarParser.STRING); }
 		public TerminalNode STRING(int i) {
-			return getToken(Lisp1Parser.STRING, i);
+			return getToken(MyGrammarParser.STRING, i);
 		}
 		public PiecesContext pieces() {
 			return getRuleContext(PiecesContext.class,0);
 		}
-		public TerminalNode OC() { return getToken(Lisp1Parser.OC, 0); }
-		public List<TerminalNode> NAMEIDENTIFIER() { return getTokens(Lisp1Parser.NAMEIDENTIFIER); }
+		public TerminalNode OC() { return getToken(MyGrammarParser.OC, 0); }
+		public List<TerminalNode> NAMEIDENTIFIER() { return getTokens(MyGrammarParser.NAMEIDENTIFIER); }
 		public TerminalNode NAMEIDENTIFIER(int i) {
-			return getToken(Lisp1Parser.NAMEIDENTIFIER, i);
+			return getToken(MyGrammarParser.NAMEIDENTIFIER, i);
 		}
-		public List<TerminalNode> NUMBER() { return getTokens(Lisp1Parser.NUMBER); }
+		public List<TerminalNode> NUMBER() { return getTokens(MyGrammarParser.NUMBER); }
 		public TerminalNode NUMBER(int i) {
-			return getToken(Lisp1Parser.NUMBER, i);
+			return getToken(MyGrammarParser.NUMBER, i);
 		}
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -209,26 +206,26 @@ public class Lisp1Parser extends Parser {
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public List<TerminalNode> COMMENT() { return getTokens(Lisp1Parser.COMMENT); }
+		public List<TerminalNode> COMMENT() { return getTokens(MyGrammarParser.COMMENT); }
 		public TerminalNode COMMENT(int i) {
-			return getToken(Lisp1Parser.COMMENT, i);
+			return getToken(MyGrammarParser.COMMENT, i);
 		}
-		public TerminalNode CC() { return getToken(Lisp1Parser.CC, 0); }
+		public TerminalNode CC() { return getToken(MyGrammarParser.CC, 0); }
 		public ExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).enterExpression(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).exitExpression(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).exitExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof Lisp1Visitor ) return ((Lisp1Visitor<? extends T>)visitor).visitExpression(this);
+			if ( visitor instanceof MyGrammarVisitor ) return ((MyGrammarVisitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -355,9 +352,9 @@ public class Lisp1Parser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class PiecesContext extends ParserRuleContext {
-		public TerminalNode PIECE() { return getToken(Lisp1Parser.PIECE, 0); }
-		public TerminalNode STRING() { return getToken(Lisp1Parser.STRING, 0); }
-		public TerminalNode ABSTRACT() { return getToken(Lisp1Parser.ABSTRACT, 0); }
+		public TerminalNode PIECE() { return getToken(MyGrammarParser.PIECE, 0); }
+		public TerminalNode STRING() { return getToken(MyGrammarParser.STRING, 0); }
+		public TerminalNode ABSTRACT() { return getToken(MyGrammarParser.ABSTRACT, 0); }
 		public ParentContext parent() {
 			return getRuleContext(ParentContext.class,0);
 		}
@@ -379,15 +376,15 @@ public class Lisp1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_pieces; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).enterPieces(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).enterPieces(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).exitPieces(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).exitPieces(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof Lisp1Visitor ) return ((Lisp1Visitor<? extends T>)visitor).visitPieces(this);
+			if ( visitor instanceof MyGrammarVisitor ) return ((MyGrammarVisitor<? extends T>)visitor).visitPieces(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -471,16 +468,16 @@ public class Lisp1Parser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ParentContext extends ParserRuleContext {
-		public TerminalNode ISA() { return getToken(Lisp1Parser.ISA, 0); }
-		public List<TerminalNode> STRING() { return getTokens(Lisp1Parser.STRING); }
+		public TerminalNode ISA() { return getToken(MyGrammarParser.ISA, 0); }
+		public List<TerminalNode> STRING() { return getTokens(MyGrammarParser.STRING); }
 		public TerminalNode STRING(int i) {
-			return getToken(Lisp1Parser.STRING, i);
+			return getToken(MyGrammarParser.STRING, i);
 		}
-		public TerminalNode OC() { return getToken(Lisp1Parser.OC, 0); }
-		public TerminalNode CC() { return getToken(Lisp1Parser.CC, 0); }
-		public List<TerminalNode> RAZ() { return getTokens(Lisp1Parser.RAZ); }
+		public TerminalNode OC() { return getToken(MyGrammarParser.OC, 0); }
+		public TerminalNode CC() { return getToken(MyGrammarParser.CC, 0); }
+		public List<TerminalNode> RAZ() { return getTokens(MyGrammarParser.RAZ); }
 		public TerminalNode RAZ(int i) {
-			return getToken(Lisp1Parser.RAZ, i);
+			return getToken(MyGrammarParser.RAZ, i);
 		}
 		public ParentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -488,15 +485,15 @@ public class Lisp1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parent; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).enterParent(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).enterParent(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).exitParent(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).exitParent(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof Lisp1Visitor ) return ((Lisp1Visitor<? extends T>)visitor).visitParent(this);
+			if ( visitor instanceof MyGrammarVisitor ) return ((MyGrammarVisitor<? extends T>)visitor).visitParent(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -565,28 +562,28 @@ public class Lisp1Parser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class DefineContext extends ParserRuleContext {
-		public TerminalNode OP() { return getToken(Lisp1Parser.OP, 0); }
-		public TerminalNode DEFINE() { return getToken(Lisp1Parser.DEFINE, 0); }
-		public TerminalNode STRING() { return getToken(Lisp1Parser.STRING, 0); }
+		public TerminalNode OP() { return getToken(MyGrammarParser.OP, 0); }
+		public TerminalNode DEFINE() { return getToken(MyGrammarParser.DEFINE, 0); }
+		public TerminalNode STRING() { return getToken(MyGrammarParser.STRING, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode CP() { return getToken(Lisp1Parser.CP, 0); }
+		public TerminalNode CP() { return getToken(MyGrammarParser.CP, 0); }
 		public DefineContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_define; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).enterDefine(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).enterDefine(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).exitDefine(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).exitDefine(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof Lisp1Visitor ) return ((Lisp1Visitor<? extends T>)visitor).visitDefine(this);
+			if ( visitor instanceof MyGrammarVisitor ) return ((MyGrammarVisitor<? extends T>)visitor).visitDefine(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -625,22 +622,22 @@ public class Lisp1Parser extends Parser {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode STRING() { return getToken(Lisp1Parser.STRING, 0); }
+		public TerminalNode STRING() { return getToken(MyGrammarParser.STRING, 0); }
 		public MoveContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_move; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).enterMove(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).enterMove(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Lisp1Listener ) ((Lisp1Listener)listener).exitMove(this);
+			if ( listener instanceof MyGrammarListener ) ((MyGrammarListener)listener).exitMove(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof Lisp1Visitor ) return ((Lisp1Visitor<? extends T>)visitor).visitMove(this);
+			if ( visitor instanceof MyGrammarVisitor ) return ((MyGrammarVisitor<? extends T>)visitor).visitMove(this);
 			else return visitor.visitChildren(this);
 		}
 	}

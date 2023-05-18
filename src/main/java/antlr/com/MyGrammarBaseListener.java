@@ -1,89 +1,89 @@
-// Generated from C:/Projects/test1/src/main\Lisp1.g4 by ANTLR 4.12.0
-package src.main;
+// Generated from C:/Projects/test1/src/main/java/antlr\MyGrammar.g4 by ANTLR 4.12.0
+package antlr.com;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link Lisp1Listener},
+ * This class provides an empty implementation of {@link MyGrammarListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class Lisp1BaseListener implements Lisp1Listener {
+public class MyGrammarBaseListener implements MyGrammarListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(Lisp1Parser.ProgramContext ctx) { }
+	@Override public void enterProgram(MyGrammarParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(Lisp1Parser.ProgramContext ctx) { }
+	@Override public void exitProgram(MyGrammarParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(Lisp1Parser.ExpressionContext ctx) { }
+	@Override public void enterExpression(MyGrammarParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(Lisp1Parser.ExpressionContext ctx) { }
+	@Override public void exitExpression(MyGrammarParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPieces(Lisp1Parser.PiecesContext ctx) { }
+	@Override public void enterPieces(MyGrammarParser.PiecesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPieces(Lisp1Parser.PiecesContext ctx) { }
+	@Override public void exitPieces(MyGrammarParser.PiecesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParent(Lisp1Parser.ParentContext ctx) { }
+	@Override public void enterParent(MyGrammarParser.ParentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParent(Lisp1Parser.ParentContext ctx) { }
+	@Override public void exitParent(MyGrammarParser.ParentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDefine(Lisp1Parser.DefineContext ctx) { }
+	@Override public void enterDefine(MyGrammarParser.DefineContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDefine(Lisp1Parser.DefineContext ctx) { }
+	@Override public void exitDefine(MyGrammarParser.DefineContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMove(Lisp1Parser.MoveContext ctx) { }
+	@Override public void enterMove(MyGrammarParser.MoveContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMove(Lisp1Parser.MoveContext ctx) { }
+	@Override public void exitMove(MyGrammarParser.MoveContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
