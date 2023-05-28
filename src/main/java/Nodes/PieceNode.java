@@ -12,12 +12,12 @@ public class PieceNode {
     private List<String> _define;
     private List<String> _move;
 
-    public PieceNode(boolean _abstract, String name){
+    public PieceNode(boolean _abstract, String name) {
         this._abstract = _abstract;
         _name = name;
     }
 
-    public PieceNode(int number, boolean _abstract, String name, List<String> parentsName, List<String> define){
+    public PieceNode(int number, boolean _abstract, String name, List<String> parentsName, List<String> define) {
         _number = number;
         this._abstract = _abstract;
         _name = name;
@@ -31,19 +31,23 @@ public class PieceNode {
         return _parents;
     }
 
-    public void addParent(PieceNode parent){
+    public void addParent(PieceNode parent) {
         _parents.add(parent);
     }
 
-    public List<String> getParentsName(){
+    public List<String> getParentsName() {
         return _parentsName;
     }
 
-    public String getName(){
+    public String getName() {
         return _name;
     }
 
-    public boolean isAbstract(){
+    public boolean isAbstract() {
         return _abstract;
+    }
+
+    public int getNumber() {
+        return _number;
     }
 }

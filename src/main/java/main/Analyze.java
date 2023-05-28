@@ -1,19 +1,24 @@
+package main;
+
+import antlr.MyVisitor;
 import antlr.com.MyGrammarLexer;
 import antlr.com.MyGrammarParser;
-import antlr.MyVisitor;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class Main {
+//todo проверка на файл входной, его расширение
+public class Analyze {
     public static void main(String[] args) {
-        //String fileName = "SUPER_Cumi_04 — TOBE.lud";
-        String fileName = args[0];
-        String input = readFileToString(fileName);
+        String path = args[0];
+        File file = new File(path);
+        String fileName = file.getName();
+        String input = readFileToString(path);
 
         MyGrammarLexer lexer = new MyGrammarLexer(CharStreams.fromString(input));
         CommonTokenStream tokenStream = new CommonTokenStream(lexer);
