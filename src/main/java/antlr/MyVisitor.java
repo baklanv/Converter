@@ -41,13 +41,20 @@ public class MyVisitor extends MyGrammarBaseVisitor<String> {
                 }
             }
         }
-        mapFormation();
-        defineFormation();
-        addMap(builder, _mapNodes);
-        addDefine(builder, _definePieceNodes, _defineDistanceBetween, _definePiece);
+        if (_allPieceNode.size()!=0 && _finalPiece.size()!=0) {
+            mapFormation();
+            defineFormation();
+            addMap(builder, _mapNodes);
+            addDefine(builder, _definePieceNodes, _defineDistanceBetween, _definePiece);
+        }
         if (!_errorList.isEmpty())
         {
-            return _errorList.get(0);
+            builder.setLength(0);
+            builder.append("Error:\n");
+
+            for (String error : _errorList.values()){
+                builder.append(error).append("\n");
+            }
         }
         return builder.toString();
     }
@@ -165,7 +172,10 @@ public class MyVisitor extends MyGrammarBaseVisitor<String> {
         for (ParseTree child : ctx.children) {
             String result = visit(child);
             if (result != null) {
-                builder.append(result);
+                if (result.equals("@define ")) {
+                    builder.append(result.substring(1));
+                }
+                else builder.append(result);
             }
         }
         level--;
@@ -297,20 +307,24 @@ public class MyVisitor extends MyGrammarBaseVisitor<String> {
     }
 
     public boolean checkPiece(){
+        boolean isCorrect = true;
         for (PieceNode currentPiece : _allPieceNode) {
             for (String parent : currentPiece.getParentsName()) {
                 if (_allPieceNode.stream().noneMatch(node -> node.getName().equals(parent))){
-                    return false;
+                    _errorList.put(parent, "Piece " + parent + " undefined!");
+                    isCorrect = false;
                 }
             }
         }
 
-//        for(String name : _finalPiece.keySet()){
-//            if (_allPieceNode.stream().noneMatch(node -> node.getName().equals(name))){
-//                return name;
-//            }
-//        }
-        return true;
+        for(String name : _finalPiece.keySet()){
+            if (_allPieceNode.stream().noneMatch(node -> node.getName().equals(name))){
+                _errorList.put(name, "Piece " + name + " undefined!");
+                isCorrect = false;
+            }
+        }
+
+        return isCorrect;
     }
     public void defineFormation(){
         _definePieceNodes.add(new DefinePieceNode("\"SuperPiece\"", 0));

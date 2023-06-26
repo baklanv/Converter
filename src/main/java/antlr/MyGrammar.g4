@@ -7,8 +7,8 @@ grammar MyGrammar;
  * PARSER RULES
  *------------------------------------------------------------------*/
 program : (COMMENT | expression)* EOF ;
-expression: OP (IDENTIFIER | STRING | pieces) OC? (NAMEIDENTIFIER | IDENTIFIER | STRING | NUMBER |expression | COMMENT)* CC? CP;
-pieces: PIECE ABSTRACT? STRING parent? define* move*;
+expression: OP (IDENTIFIER | STRING | pieces)  (OC | NAMEIDENTIFIER | IDENTIFIER | STRING | NUMBER |expression | COMMENT |CC)*  CP;
+pieces: PIECE ABSTRACT? STRING parent? define* move?;
 parent: ISA (STRING | (OC STRING (RAZ STRING)* CC));
 define : OP DEFINE STRING expression CP;
 move : expression |STRING ;
@@ -17,7 +17,7 @@ move : expression |STRING ;
  *------------------------------------------------------------------*/
 ISA: '@is_a:' ;
 PIECE : '@piece' ;
-DEFINE : 'define';
+DEFINE : 'define' ;
 ABSTRACT : '@abstract';
 
 IDENTIFIER : ((LETTER (LETTER | DIGIT)*)| ARITHMETIC | LOGICAL | EMTPY | PARAM)  ;
