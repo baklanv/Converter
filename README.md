@@ -1,0 +1,1 @@
+для генерации исполняемого файла необходимо в Execute Maven Goal запустить команду "mvn clean install"
